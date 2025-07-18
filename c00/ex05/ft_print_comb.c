@@ -1,29 +1,28 @@
 #include <unistd.h>
-#include <stdio.h>
-void ft_print_comb (void)
-{
-	int i;
-	int j;
-	int k;
 
-	i = 0;
-	while (i <= 7)
+void	ft_print_comb(void)
+{
+	char	a;
+	char	b;
+	char	c;
+
+	a = '0';
+	while (a <= '7')
 	{
-		j = i + 1;
-		while (j <= 8)
+		b = a + 1;
+		while (b <= '8')
 		{
-			k = j + 1;
-			while (k <= 9)
+			c = b + 1;
+			while (c <= '9')
 			{
-				if (i < j && j < k)
-				{
-					printf ("%d%d%d", i, j, k);
-					printf (", \t");
-				}
-				k++;
+				write(1, &a, 1);
+				write(1, &b, 1);
+				write(1, &c, 1);
+				write(1, ", ", 2);
+				c++;
 			}
-			j++;
+			b++;
 		}
-		i++;
+		a++;
 	}
 }
