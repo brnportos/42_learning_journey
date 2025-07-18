@@ -18,7 +18,8 @@ void	ft_print_comb(void)
 				write(1, &a, 1);
 				write(1, &b, 1);
 				write(1, &c, 1);
-				write(1, ", ", 2);
+				if (a != '7')
+					write(1, ", ", 2);
 				c++;
 			}
 			b++;
