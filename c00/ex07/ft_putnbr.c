@@ -10,9 +10,3 @@ void	ft_putnbr(int nb)
 	ft_putchar(nb / 10 + '0');
 	ft_putchar(nb % 10 + '0');
 }
-
-int	main(void)
-{
-	ft_putnbr(100);
-	return (0);
-}
